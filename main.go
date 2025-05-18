@@ -7,19 +7,15 @@ import (
 
 func main() {
 
+	// first arg is always the program name
 	args := os.Args[1:]
 
-	if len(args) == 0 {
-		fmt.Println("Please provide some args that we echo back for you")
+	if len(args) == 1 {
+		fmt.Println("Provide some args")
 		return
 	}
-
-
-
-	fmt.Println("Echoing back to you...")
 
 	for _, arg := range args {
 		fmt.Println(arg)
 	}
-
 }
